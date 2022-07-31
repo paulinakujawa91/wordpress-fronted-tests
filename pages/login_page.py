@@ -19,12 +19,3 @@ class LoginPage:
 
     def get_error_message(self):
         return self.driver.find_element(*LoginPageLocators.error_msg).text
-
-"""
-<div id="login_error">	
-<strong>Error</strong>: The password you entered for the username 
-<strong>admin</strong> is incorrect. 
-<a href="http://localhost/wp-login.php?action=lostpassword">Lost your password?
-</a><br>
-</div>
-"""
