@@ -8,7 +8,7 @@ driverpath = r'C:\Users\Tomek_2\Desktop\kursy_udemy\SELENIUM\chromedriver.exe'
 def setup(request):
     opts = Options()
     driver = webdriver.Chrome(driverpath, chrome_options=opts)
-    driver.implicitly_wait(1000)
+    driver.implicitly_wait(10)
     driver.maximize_window()
     request.cls.driver = driver
     yield
