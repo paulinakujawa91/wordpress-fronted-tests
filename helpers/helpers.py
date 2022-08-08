@@ -1,7 +1,5 @@
 import random
 
-from selenium.webdriver.support import wait, expected_conditions
-
 
 def get_random_string():
     ints = range(33, 127)
