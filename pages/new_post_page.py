@@ -3,14 +3,16 @@ from pages.login_page import LoginPage
 from locators.new_post_locators import NewPostLocators
 
 
-class AddNewPost(LoginPage):
+class NewPostPage(LoginPage):
 
     def __init__(self, driver):
         LoginPage.__init__(self, driver)
 
-    def new_post_title(self, title):
+    def create_new_post(self):
         self.driver.find_element(*NewPostLocators.menu_posts).click()
         self.driver.find_element(*NewPostLocators.add_new_link).click()
+
+    def set_post_title(self, title):
         self.driver.find_element(*NewPostLocators.add_title).send_keys(title)
 
     def add_block_list(self):
